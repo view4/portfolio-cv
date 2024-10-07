@@ -9,6 +9,7 @@ body {
     font-optical-sizing: auto;
     /* font-weight: <weight>; */
     font-style: normal;
+    width: 100vw;
 }
 
 header {
@@ -72,7 +73,7 @@ nav a {
     grid-column: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -214,7 +215,6 @@ nav a {
 .bio {
     padding: 20px;
     border-radius: 10px;
-    /* width: 50%; Make the About Me section wider */
 }
 
 .links {
@@ -229,7 +229,6 @@ nav a {
     margin: 1rem 0;
     text-decoration: none;
     color: inherit;
-    /* Links inherit color */
 }
 
 /* Additional styles for the portfolio section and other sections */
@@ -431,7 +430,6 @@ nav a {
     border-radius: 1rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    overflow-y: hidden;
 }
 
 .appendages-section>div:nth-child(4) {
@@ -534,4 +532,171 @@ nav a {
     text-align: justify;
     width: 90%;
     margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    header {
+        max-height: 3rem;
+    }
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
+    section h2 {
+        font-size: 1.36rem;
+    }
+
+    .profile-pic {
+        width: 12rem;
+        height: 12rem;
+        margin-top: unset;
+    }
+
+    .about-container p {
+        font-size: 1.25rem;
+    }
+
+    .about-container h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-container h2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0.25rem 0rem;
+        font-weight: 500;
+
+    }
+
+    .about-container>div:first-child {
+        grid-row: 2;
+        grid-column: 2/8;
+    }
+
+    .about-container h1 {
+        font-size: 3rem;
+        margin: 0.5rem 0rem;
+    }
+
+    .about-container>div:nth-child(2) {
+        grid-row: 8;
+        grid-column: 2/8;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .divider-dot {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 100%;
+        background-color: black;
+        margin: 0rem 0.5rem;
+    }
+
+    .about-container>div:nth-child(3) {
+        grid-column: 2/8;
+        grid-row: 3;
+    }
+
+    .about-container>div:nth-child(4) {
+        grid-column: 2/8;
+        grid-row: 4 / 7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+    }
+
+    .links a {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .technologies-container>div:first-child {
+        grid-column: 2 / 8;
+        grid-row: 1;
+
+        /* display: flex; */
+    }
+
+    .technologies-container>div:nth-child(2) {
+        grid-column: 2 / 8;
+        grid-row: 2 / 9;
+        overflow-y: scroll;
+        /* hide scrollbar */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .technologies-container>div:nth-child(2)::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tech-tag {
+        font-size: 1.125rem;
+        margin: 0.125rem 0.25rem;
+    }
+
+    .appendages-section h3 {
+        margin: 0.5rem 0rem;
+    }
+
+
+    .appendages-section>div {
+        overflow-y: scroll;
+        /* hide scrollbar */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .appendages-section>div::-webkit-scrollbar {
+        display: none;
+    }
+
+    .appendages-section>div:first-child {
+        grid-column: 1 / 9;
+        grid-row: 1;
+        margin: 0.5rem 1rem;
+    }
+
+    .appendages-section>div:nth-child(2) {
+        grid-column: 1 / 9;
+        grid-row: 2 / 4;
+        margin: 0.5rem 1rem;
+    }
+
+    .appendages-section>div:nth-child(3) {
+        grid-column: 1 / 9;
+        grid-row: 4 / 6;
+        margin: 0.5rem 1rem;
+    }
+
+    .appendages-section>div:nth-child(4) {
+        grid-column: 1 / 9;
+        grid-row: 6 /8;
+        margin: 0.5rem 1rem;
+    }
+
+    .passion.open {
+        height: unset;
+    }
+
 }
