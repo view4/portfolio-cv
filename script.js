@@ -3,6 +3,17 @@ const { technologies, hearted, projects, tieredProjects, passions } = copy;
 const addEventListeners = () => {
   const closeDrawerContainer = document.getElementById("cpd");
   closeDrawerContainer.addEventListener("click", () => closeDrawer());
+  document.getElementById("nav-menu").addEventListener("click", () => {
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("open");
+  });
+  document.getElementById('nav').childNodes.forEach((child) => {
+    child.addEventListener('click', () => {
+      const nav = document.getElementById("nav");
+      nav.classList.remove("open");
+    })
+  })
+  
 };
 
 const onLoad = () => {
@@ -75,7 +86,7 @@ const appendProjectToContainer = (container, project) => {
   const title = document.createElement("h4");
   title.textContent = projects[project].title;
   const image = document.createElement("img");
-  image.src = "photo.png";
+  image.src = `./images/${projects[project].img}.png`;
   projectDiv.appendChild(image);
   projectDiv.appendChild(title);
   container.appendChild(projectDiv);
@@ -106,7 +117,7 @@ const displayProjectInDrawer = (projectKey) => {
   const img = document.createElement("img");
   createCarousel(carouselContainer, [
     "photo.png",
-    ...projects[projectKey].images.map((img) => img.source),
+    ...projects[projectKey].images.map((img) => `./images${img.source}.png`),
   ]);
 
   carouselContainer.appendChild(img);
