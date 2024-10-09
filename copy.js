@@ -246,15 +246,19 @@ copy.projects = {
   },
   stork: {
     title: "Stork",
+    img: ''
   },
   P4P: {
     title: "People 4 Progress (P4P)",
+    img: ''
   },
   tigra: {
     title: "Tigra",
+    img: ''
   },
   "joel-and-sons": {
     title: "Joel & Sons",
+    img: ''
   },
 };
 

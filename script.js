@@ -7,14 +7,15 @@ const addEventListeners = () => {
     const nav = document.getElementById("nav");
     nav.classList.toggle("open");
   });
-  document.getElementById('nav').childNodes.forEach((child) => {
-    child.addEventListener('click', () => {
+  document.getElementById("nav").childNodes.forEach((child) => {
+    child.addEventListener("click", () => {
       const nav = document.getElementById("nav");
       nav.classList.remove("open");
-    })
-  })
-  
+    });
+  });
 };
+
+const isMobile = window.innerWidth < 768;
 
 const onLoad = () => {
   appendTags();
@@ -115,10 +116,10 @@ const displayProjectInDrawer = (projectKey) => {
   const carouselContainer = document.createElement("div");
   carouselContainer.classList.add("carousel-container");
   const img = document.createElement("img");
-  createCarousel(carouselContainer, [
-    "photo.png",
-    ...projects[projectKey].images.map((img) => `./images${img.source}.png`),
-  ]);
+  createCarousel(
+    carouselContainer,
+    projects[projectKey].images.map((img) => `./images/${img.source}.png`)
+  );
 
   carouselContainer.appendChild(img);
   // append description to container
@@ -193,10 +194,11 @@ function createCarousel(container, images) {
   } else {
     // Create the carousel images
     images.forEach((imageSrc, index) => {
+      if (!imageSrc) return;
       const img = document.createElement("img");
       img.src = imageSrc;
       img.className = "carousel-image";
-      img.style.transform = `translateX(${index * 100}%)`; // Arrange images in a row
+      img.style.left = `${index * 100}%`; // Arrange images in a row
       carouselContent.appendChild(img);
     });
 
@@ -216,7 +218,8 @@ function createCarousel(container, images) {
       currentIndex = index;
       const images = document.querySelectorAll(".carousel-image");
       images.forEach((img, i) => {
-        img.style.transform = `translateX(${(i - currentIndex) * 100}%)`;
+        img.style.left = `${(i - currentIndex) * 100}%`;
+        img.style.position = i === currentIndex ? "absolute" : "relative";
       });
     };
 
