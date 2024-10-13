@@ -27,7 +27,6 @@ header {
 
 section {
     height: 100vh;
-    /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,6 +35,11 @@ section {
 
 section h2 {
     font-size: 2rem;
+}
+
+
+p {
+    white-space: pre-line;
 }
 
 #about {
@@ -121,6 +125,7 @@ nav a {
 
 .about-container p {
     font-size: 2rem;
+    padding: 1.5rem;
 }
 
 .technologies-container>div:first-child {
@@ -140,9 +145,9 @@ nav a {
 
 .tech-tag {
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    border: 2px solid black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid black;
     margin: 0.5rem 1.5rem;
     position: relative;
 }
@@ -218,7 +223,7 @@ nav a {
 }
 
 .bio {
-    padding: 20px;
+    padding: 1.5rem;
     border-radius: 10px;
 }
 
@@ -273,7 +278,8 @@ nav a {
 .project-thumbnail img {
     height: 72%;
     width: 72%;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    box-shadow: 1rem 1rem 1rem #8080801a;
 }
 
 .project-thumbnail h4 {
@@ -432,6 +438,10 @@ nav a {
     scrollbar-width: none;
 }
 
+.appendages-section span {
+    text-align: justify;
+}
+
 .appendages-section>div::-webkit-scrollbar {
     display: none;
 }
@@ -474,7 +484,7 @@ nav a {
 
 .appendages-section>div:nth-child(4) p {
     margin: unset;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .appendages-section>div span {
@@ -642,6 +652,7 @@ nav a {
 
     .about-container p {
         font-size: 1.25rem;
+        padding: 1rem 0rem;
     }
 
     section .about-container h2 {

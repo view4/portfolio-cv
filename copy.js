@@ -2,13 +2,14 @@ const copy = {};
 
 copy.technologies = [
   "Amazon Web-Services(AWS)",
-  "DigitalOcean",
+  "Digital Ocean",
   "Docker",
   "Grafana",
   "React",
   "React-Native",
   "Expo",
   "Django",
+  "Flask",
   "Node.js",
   "Nest.js",
   "Express",
@@ -21,19 +22,26 @@ copy.technologies = [
   "Non-SQL",
   "MongoDB",
   "React-Redux",
+  "Postgres",
   "SFTP",
   "HTML",
-  "CSS",
-  "Responsive design",
-  "OOP",
+  "Css",
   "Git",
   "Heroku",
   "Firebase",
-  "Node.js",
   "Digital Ocean",
   "Apache",
   "Stripe.js",
+  "Redux-Toolkit",
+  "Twilio",
+  "Next.js",
+  "Nginx",
+  "GraphQL",
+  "Web Sockets",
+  "Prisma",
+  "Sendgrid",
 ];
+
 copy.hearted = [
   "JavaScript",
   "TypeScript",
@@ -50,7 +58,13 @@ copy.hearted = [
 copy.projects = {
   dmi: {
     title: "Bluebridge Accountancy",
-    img: 'dmiOne',
+    img: "bluebridge-cover.png",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+    },
+    date: 2020,
     images: [
       {
         source: "dmiOne",
@@ -66,16 +80,23 @@ copy.projects = {
         description: "Nurture growth. ",
       },
     ],
-    description:
-      " Professional website for an individual who is taking the great step towards providing his services to the public more independently - something which is personally deeply valued.",
+    description: `Here, I provided services for an accountant on their journey going independent. I launched the website, co-designing the wesbsite whilst utilising a bootstrap template which was heavily customised for an optimised responsive user experience.`,
+    // " Professional website for an individual who is taking the great step towards providing his services to the public more independently - something which is personally deeply valued.",
     technologies: ["Bootstrap", "HTML/CSS"],
   },
   troox: {
     title: "Troox",
     description:
-      " The aim of this project was to implement a complete overhaul of the app design to provide a better user interface (UI). The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.",
+      "Here I worked with a professional development agency whereby I implemtned a renewed UI throughout the Troox application according to the provided designs.",
+    date: 2020,
+    // " The aim of this project was to implement a complete overhaul of the app design to provide a better user interface (UI). The App itself is a messaging app with a twist, whereby valuable 'troox' are sent to friends or family on special occasions.",
     technologies: ["React-Native", "React-Redux", "Javascript"],
-    img: 'troox-one',
+    img: "troox-cover.webp",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+    },
     images: [
       {
         source: "troox-one",
@@ -95,11 +116,17 @@ copy.projects = {
     ],
   },
   apple: {
-    title: "Recreating the apple website",
+    title: "M'Apple ",
     description:
       " This was a prime example of displaying the appropriate skills for developing from design because, whilst also implementing and perfecting the ‘bread and butter’ of web development - HTML and CSS.",
     technologies: ["HTML", "CSS"],
-    img: 'apple',
+    img: "m'apple-cover.avif",
+    imgStyleProps: {
+      // height: "72%",
+      // width: "54%",
+      borderRadius: "1rem",
+    },
+    date: 2019,
     images: [
       {
         source: "apple",
@@ -119,12 +146,16 @@ copy.projects = {
     ],
   },
   "order-please": {
-    title: "Remote Restaurant Ordering ",
+    title: "Order Please! ",
     description:
-      " This App, is a specialised app to improve the restaurant experience by automatically splitting the bill for clients and also easing the ordering process for waiters/ waitresses. Many features were included in the app including a QR scanning capability and SMS message generation. Just to note, as this app was a prototype design was not a priority which is why the outline is so basic. The app was dual facing, making it usable for either the customer or the waiter and consisted of multiple screens. ",
+      "I developed a prototype application for a client's project, whereby customers can order from the menu, from within the application, the bill could be automaitically split whilst preparing an sms message for the customer. The prototype was implemented without design. ",
     technologies: ["React-Native", "Expo", "Firebase"],
     availability: "Available in google play store:",
-    img: 'orderPlease-one',
+    img: "order-please-cover.png",
+    imgStyleProps: {
+      borderRadius: "1rem",
+    },
+    date: 2019,
     images: [
       {
         source: "orderPlease-one",
@@ -145,8 +176,9 @@ copy.projects = {
   },
   fleetonomy: {
     title: "Fleetonomy",
+    date: 2019,
     description:
-      " Being involved in multiple aspects of the startup’s platform, performing front-end and back-end tasks provided a better understanding of systems with a large code infrastructure. Working with developers with many years of experience and with high standards for the quality of code triggered a recognisable improvement in coding capability. Tasks included developing front-end features, often developing from design. This startup is based in Tel-Aviv, and was mostly involved in working on their dashboard and also with their microservices for the client Jaguar- Land Rover in the UK.",
+      "My first experience writing deployed industry level code was with Fleetonomy. During this period I worked on full-stack tasks for a project being run with the UK based Jaguar-Land Rover company.",
     technologies: [
       "React",
       "React-Redux",
@@ -155,14 +187,13 @@ copy.projects = {
       "Flask",
       "Mandrill",
     ],
-    img: 'fleetonomy-one',
+    img: "fleetonomy-one.png",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+    },
     images: [
-      {
-        source: "fleetonomy-one",
-        description:
-          "Fleetonomy, an exciting startup, is fast making a name for themselves in the automotive industry.",
-        contain: "true",
-      },
       {
         source: "fleetonomy-two",
         description:
@@ -174,14 +205,26 @@ copy.projects = {
           "Feel free to read about some of the great things they are doing in the automotive industry.",
         contain: "true",
       },
+
+      {
+        source: "fleetonomy_cover",
+        description:
+          "Fleetonomy, an exciting startup, is fast making a name for themselves in the automotive industry.",
+        contain: "true",
+        type: "jpeg",
+      },
     ],
   },
   caeserstone: {
     title: "Caeserstone",
     description:
-      "Dual, Desktop and Mobile, applications with extensive updates - new features, further design changes and general improvements made to both. The apps were designed to enable customers to select products using the designated mobile devices in-store at an innovative and popular interior design store. ",
+      "I worked on dual, web and mobile, applications providing extensive updates - new features, further design changes and general improvements made to both. The apps were designed to enable customers to select products using the designated mobile devices in-store at an innovative and popular interior design store. ",
     technologies: ["React", "React-Native", "HTML/CSS", "Git"],
-    img: 'caeserstone-one', 
+    img: "caeserstone-cover.png",
+    imgStyleProps: {
+      marginBottom: "1.5rem",
+    },
+    date: 2020,
     images: [
       {
         source: "caeserstone-one",
@@ -205,11 +248,12 @@ copy.projects = {
     ],
   },
   bri: {
-    title: "Birthright (interactive video)",
+    title: "Interactive Tourist Video ",
     description:
-      "Birthright Israel's promotional and interactive video. A supplement during the covid-19 times this project helped provide an immersive experience showing how adventurous a trip to Israel can be. ",
+      "During Covid-19 travel was banned, I worked on a supplementary immersive video to promote post-lockdown travel, whereby users could design their own video journey through the customised utilisation of Eko digital software.",
     technologies: ["React", "HTML/CSS", "Eko"],
-    img: 'bri-one',
+    date: 2020,
+    img: "bri-cover.png",
     images: [
       {
         source: "bri-one",
@@ -227,8 +271,10 @@ copy.projects = {
   touchit: {
     title: "TouchIt",
     description:
-      "Continuous updates, design and new feature integration for a commercially used application - a touch screen catalogue system designed for use in a well-known duty-free store.",
+      "I worked with a web development agency, providing feature updates, design changes and structural improvements to this duty-free in store touch application.",
+    // "Continuous updates, design and new feature integration for a commercially used application - a touch screen catalogue system designed for use in a well-known duty-free store.",
     technologies: ["React", "HTML/CSS", "Javascript"],
+    date: 2020,
     images: [
       {
         source: "touchit-one",
@@ -242,23 +288,124 @@ copy.projects = {
         contain: "true",
       },
     ],
-    img: 'touchit-one',
+    img: "touchit-cover.jpeg",
   },
   stork: {
     title: "Stork",
-    img: ''
+    img: "stork-icon.png",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+    },
+    images: [
+      { source: "stork-cover", type: "svg" },
+      { source: "stork", type: "jpg" },
+      { source: "stork-two" },
+    ],
+    date: "2021, 2023-2024",
+    technologies: [
+      "React",
+      "Javascript",
+      "Python",
+      "Django",
+      "Express",
+      "Nest.js",
+      "Mongoose",
+      "Postgres",
+      "SendGrid",
+      "Typescript",
+      "React-Redux",
+      "SFTP",
+    ],
+    description:
+      "Stork has been an important project for me. I have been involved with it from the beginning, and journeyed beyond developing the MVP into continuing to develop progressive features and digital tools being used at the forefront of the luxury goods industry.",
   },
   P4P: {
-    title: "People 4 Progress (P4P)",
-    img: ''
+    title: "P4P",
+    fullTitle: "People 4 Progress (P4P)",
+    img: "p4p-cover.jpg",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+      marginBottom: "10%",
+    },
+    images: [
+      { source: "p4p-cover", type: "svg" },
+      { source: "p4p-a" },
+      { source: "p4p-b" },
+      { source: "p4p-c" },
+    ],
+    description: `
+    P4P is an ongoing project, centered and directed towards unifying efforts towards peace and social change through providing a dedicated digital space for individuals and communities to organise and coordinate efforts. We are currently running a pilot programme, asking users to make use of our playground environment and to provide us with some important feedback.
+    
+    I've worked on multiple apps where I've sought to merge technology with my values and personal passion, this is the first time doing so in collaboration with people and it's been thoroughly incredible journey so far. `,
+    date: "2023 - 2024 (Ongoing)",
+    technologies: [
+      "React",
+      "Nest.js",
+      "React-Redux",
+      "Typescript",
+      "Javascript",
+      "MongoDB",
+      "Mongoose",
+      "Stripe.JS",
+      "Twilio",
+    ],
   },
   tigra: {
     title: "Tigra",
-    img: ''
+    img: "tig-icon.webp",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+    },
+    images: [
+      { source: "tig", type: "webp" },
+      { source: "tig-two", type: "webp" },
+      { source: "tig-three", type: "webp" },
+    ],
+    date: "2022 - 2023",
+    description:
+      "I worked on Tigra from an early stage, bringing the concept to the app-stores over about a one year period, leading a small team of developers in the process.",
+    technologies: [
+      "React-Native",
+      "React",
+      "Docusign API",
+      "Python",
+      "Django",
+      "Javascript",
+    ],
   },
   "joel-and-sons": {
     title: "Joel & Sons",
-    img: ''
+    img: "joel-and-sons-cover.jpeg",
+    imgStyleProps: {
+      height: "72%",
+      width: "54%",
+      borderRadius: "1.8rem",
+    },
+    images: [
+      { source: "js-a", type: "jpg" },
+      { source: "js" },
+      { source: "js-b" },
+    ],
+    date: 2022,
+    description:
+      "Joel & Sons is an established family run commerce business based in London. I worked over a period of a few months rennovating the business' online store utilising some of the most progressive web frameworks and technologies in the process.",
+    technologies: [
+      "React",
+      "Adyen",
+      "Next.js",
+      "Prisma",
+      "Circle CI",
+      "Docker",
+      "Nest.js",
+      "Typescript",
+      "Postgres",
+    ],
   },
 };
 
@@ -272,17 +419,12 @@ copy.passions = [
   {
     name: "Life",
     content:
-      "I love living, the challenges and adventures that come with it. I'm passionate about getting the most from living, and I wish to keep growing and pushing myself as an individual and within my work.",
+    "I'm passionate for Life. I embrace challenges and adventures, whilst getting the most from living, and I wish to keep growing and pushing myself as an individual and within my work.",
   },
   {
     name: "writing",
     content:
       "I love the introspective and therpaeutic nature of writing alongside the beautiful nuance which can be achieved through language. I especially love writing poetry or about religion and/or philosophy.",
-  },
-  {
-    name: "music, dancing, culture",
-    content:
-      "It's important to enjoy living, music, dancing and culture are key ways which help me doing so.",
   },
   {
     name: "theology and philosophy",
@@ -293,6 +435,11 @@ copy.passions = [
     name: "technology",
     content:
       "I'm passionate about technology which has a postivie impact on society, technology which creates change and technology which alleviates suffering. If you feel the same, then let's collaborate and create together!",
+  },
+  {
+    name: "music, dancing, culture",
+    content:
+      "I believe it's important to enjoy living, music, dancing and culture are key ways which help me doing so.",
   },
 ];
 
