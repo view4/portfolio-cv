@@ -13,6 +13,10 @@ const addEventListeners = () => {
       nav.classList.remove("open");
     });
   });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDrawer();
+  });
 };
 
 const isMobile = window.innerWidth < 768;
@@ -91,7 +95,7 @@ const appendProjectToContainer = (container, project) => {
   if (projects[project].imgStyleProps) {
     Object.entries(projects[project].imgStyleProps).map(([key, value]) => {
       image.style[key] = value;
-    })
+    });
   }
   projectDiv.appendChild(image);
   projectDiv.appendChild(title);
@@ -123,7 +127,9 @@ const displayProjectInDrawer = (projectKey) => {
   const img = document.createElement("img");
   createCarousel(
     carouselContainer,
-    projects[projectKey].images.map((img) => `./images/${img.source}.${img?.type ?? 'png'}`)
+    projects[projectKey].images.map(
+      (img) => `./images/${img.source}.${img?.type ?? "png"}`
+    )
   );
 
   carouselContainer.appendChild(img);
@@ -200,11 +206,18 @@ function createCarousel(container, images) {
     // Create the carousel images
     images.forEach((imageSrc, index) => {
       if (!imageSrc) return;
+      const container = document.createElement("div");
       const img = document.createElement("img");
       img.src = imageSrc;
       img.className = "carousel-image";
-      img.style.left = `${index * 100}%`; // Arrange images in a row
-      carouselContent.appendChild(img);
+      container.className = "carousel-image-container";
+      container.style.left = `${index * 100}%`; // Arrange images in a row
+      container.appendChild(img);
+      carouselContent.appendChild(container);
+      if (index === 0) {
+        container.style.position = "absolute";
+        container.style.opacity = 1;
+      }
     });
 
     // Navigation buttons
@@ -221,7 +234,7 @@ function createCarousel(container, images) {
     // Function to update carousel position
     const updateCarousel = (index) => {
       currentIndex = index;
-      const images = document.querySelectorAll(".carousel-image");
+      const images = document.querySelectorAll(".carousel-image-container");
       images.forEach((img, i) => {
         img.style.left = `${(i - currentIndex) * 100}%`;
         img.style.position = i === currentIndex ? "absolute" : "relative";
@@ -242,6 +255,7 @@ function createCarousel(container, images) {
 
     modal.appendChild(prevButton);
     modal.appendChild(nextButton);
+    updateCarousel(currentIndex);
   }
 
   modal.appendChild(carouselContent);
