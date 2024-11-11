@@ -19,7 +19,6 @@ const addEventListeners = () => {
   });
 };
 
-const isMobile = window.innerWidth < 768;
 
 const onLoad = () => {
   appendTags();

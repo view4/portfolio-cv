@@ -29,7 +29,6 @@ copy.technologies = [
   "Git",
   "Heroku",
   "Firebase",
-  "Digital Ocean",
   "Apache",
   "Stripe.js",
   "Redux-Toolkit",
@@ -122,8 +121,6 @@ copy.projects = {
     technologies: ["HTML", "CSS"],
     img: "m'apple-cover.avif",
     imgStyleProps: {
-      // height: "72%",
-      // width: "54%",
       borderRadius: "1rem",
     },
     date: 2019,
